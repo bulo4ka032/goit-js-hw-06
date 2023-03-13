@@ -16,24 +16,18 @@ destroyBtn.addEventListener("click", destroyBoxes);
 let basicSize = 30;
 
 function createBoxes(amount) {
-  let boxes = [];
-
+  let boxes;
   for (let i = 0; i < amount; i += 1) {
     let size = basicSize + i * 10;
-    const div = document.createElement("div");
-    div.style.height = `${size}px;`;
-    div.style.width = `${size}px`;
-    div.style.backgrounColor = getRandomHexColor();
-    boxes.push(div);
+    boxes += `<div style="width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}"></div>`;
+    console.log(boxes);
   }
   boxesDiv.insertAdjacentHTML("beforeend", boxes);
 }
 
 function amountOfBoxes() {
   const amount = +controls.querySelector("input").value;
-
   console.log(amount);
-
   createBoxes(amount);
 }
 
