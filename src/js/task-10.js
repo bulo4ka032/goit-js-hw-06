@@ -8,15 +8,16 @@ const createBtn = document.querySelector("button[data-create]");
 const destroyBtn = document.querySelector("button[data-destroy]");
 const boxesDiv = document.querySelector("#boxes");
 
-const controls = document.querySelector("#controls");
+const controls = document.querySelector("#controls input");
 
 createBtn.addEventListener("click", amountOfBoxes);
 destroyBtn.addEventListener("click", destroyBoxes);
 
+let basicSize = 30;
+
 function createBoxes(amount) {
-  const boxes = [];
-  const basicSize = 30;
-  //const fragment = document.createDocumentFragment();
+  let boxes = [];
+
   for (let i = 0; i < amount; i += 1) {
     let size = basicSize + i * 10;
     const div = document.createElement("div");
@@ -25,7 +26,7 @@ function createBoxes(amount) {
     div.style.backgrounColor = getRandomHexColor();
     boxes.push(div);
   }
-  return boxes;
+  boxesDiv.insertAdjacentHTML("beforeend", boxes);
 }
 
 function amountOfBoxes() {
