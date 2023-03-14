@@ -26,6 +26,7 @@ function createBoxes(amount) {
 }
 
 function amountOfBoxes() {
+  // destroyBoxes();
   //const amount = +controls.querySelector("input").value;
   const amount = Number(controls.value);
   console.log(amount);
@@ -34,4 +35,5 @@ function amountOfBoxes() {
 
 function destroyBoxes() {
   boxesDiv.innerHTML = "";
+  basicSize = 30;
 }
