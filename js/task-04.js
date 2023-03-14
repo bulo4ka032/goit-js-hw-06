@@ -8,7 +8,7 @@ decrButton.addEventListener("click", handleDecrClick);
 function handleDecrClick() {
   counterValue -= 1;
   console.log("click - 1");
-  value.innerHTML = counterValue;
+  value.textContent = counterValue;
 }
 
 incrButton.addEventListener("click", handleIncrClick);
@@ -16,5 +16,5 @@ incrButton.addEventListener("click", handleIncrClick);
 function handleIncrClick() {
   counterValue += 1;
   console.log("click + 1");
-  value.innerHTML = counterValue;
+  value.textContent = counterValue;
 }

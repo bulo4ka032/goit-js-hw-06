@@ -4,13 +4,10 @@ console.log(`Number of categories ${categoryItem.childElementCount}`);
 const classOfItem = document.querySelectorAll(`.item`);
 //console.log(`Category: ${classOfItem}`);
 
-
-classOfItem.forEach(item => {
-    console.log(`Category: ${item.children[0].textContent}`);
-    console.log(`Element: ${item.lastElementChild.childElementCount}`);
+classOfItem.forEach((item) => {
+  console.log(`Category: ${item.firstElementChild.textContent}`);
+  console.log(`Element: ${item.lastElementChild.childElementCount}`);
 });
-
-
 
 //const array = [1, 2, 3];
 //console.log(typeof array)

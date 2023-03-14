@@ -4,7 +4,7 @@ validationInput.addEventListener("blur", eventFun);
 
 function eventFun(event) {
   if (
-    +event.target.value.length === +validationInput.getAttribute("data-length")
+    event.target.value.length === +validationInput.getAttribute("data-length")
   ) {
     validationInput.classList.add("valid");
     validationInput.classList.remove("invalid");

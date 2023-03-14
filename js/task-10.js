@@ -17,9 +17,9 @@ let basicSize = 30;
 
 function createBoxes(amount) {
   let boxes = "";
-  for (let i = 0; i < amount; i += 1) {
-    let size = basicSize + i * 10;
-    boxes += `<div style="width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}"></div>`;
+  for (let i = 0; i < amount; i += 1, basicSize += 10) {
+    // let size = basicSize + i * 10;
+    boxes += `<div style="width: ${basicSize}px; height: ${basicSize}px; background-color: ${getRandomHexColor()}"></div>`;
     // console.log(boxes);
   }
   boxesDiv.insertAdjacentHTML("beforeend", boxes);
