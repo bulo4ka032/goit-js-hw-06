@@ -8,16 +8,17 @@ function handleFormSubmit(event) {
   const password = formElements.password.value;
   const email = formElements.email.value;
 
-  if (!password || !email) {
+  if (!email || !password) {
     alert("All fields must be filled!");
-  } else {
-    const formValues = {
-      email: email,
-      password: password,
-    };
-    console.log(formValues);
-    loginForm.reset();
+    return;
   }
+  const formValues = {
+    email: email,
+    password: password,
+  };
+  console.log(formValues);
+  loginForm.reset();
+
   //   const formData = new FormData();
   //   formData.forEach((name, value) => {
   //     console.log(name, value);
